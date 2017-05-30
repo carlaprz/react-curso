@@ -5,19 +5,16 @@ class AddColorForm extends Component {
   constructor () {
     super();
 
-    this.submit = this.submit.bind(this);
-    this.handleTitle = this.handleTitle.bind(this);
-    this.handleColor = this.handleColor.bind(this);
-
     this.state = {
       title: '',
       color: '#ffffff'
     }
   }
 
-  submit (e) {
-    e.preventDefault();
+  submit = (e) => {
     const {title, color} = this.state;
+
+    e.preventDefault();
 
     this.props.onAddColor({
       title,
@@ -30,7 +27,7 @@ class AddColorForm extends Component {
     })
   }
 
-  handleTitle (e) {
+  handleTitle = (e) => {
     const title = e.target.value;
 
     this.setState({
@@ -38,7 +35,7 @@ class AddColorForm extends Component {
     });
   }
 
-  handleColor (e) {
+  handleColor = (e) => {
     const color = e.target.value;
 
     this.setState({
@@ -48,7 +45,6 @@ class AddColorForm extends Component {
 
   render () {
     const {title, color} = this.state;
-
 
     return (
       <form onSubmit={this.submit}>

@@ -6,7 +6,7 @@ function Color ({onRemove, title, value}) {
       <button onClick={onRemove}>remove</button>
       <div>color: {title}</div>
     </div>
-  )
+  );
 }
 
 export default Color;

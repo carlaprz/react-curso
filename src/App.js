@@ -17,11 +17,11 @@ class App extends Component {
   }
 
   addColor = (data) => {
-    const {title, color} = data,
+    const {title, value} = data,
         colorEntity = {
         id: v4(),
         title,
-        value: color
+        value
       },
       colors = [
         ...this.state.colors,

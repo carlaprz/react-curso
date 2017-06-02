@@ -36,11 +36,11 @@ a partir de las siguientes acciones:
 core: {
   entities: {
       boards:{
-        1: {id:1, name: 'board name'}
+        1: {id:1, name: 'board name'},
         2: {id:2, name: 'board name2'}
       },
       colors: {
-        1: {id:1, name: 'color name', value: '#ff0000'}
+        1: {id:1, name: 'color name', value: '#ff0000'},
         2: {id:2, name: 'color name 2', value: '#ffff00'}
       }
 }

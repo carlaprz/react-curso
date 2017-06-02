@@ -15,27 +15,33 @@ presentar y analizar las librerías  a utilizar por el equipo de desarrollo med
 - Flow
 
 #### Aplicación a desarrollar: (color organizer)
-Se trata de una aplicación que permita a un usuario crear colores y poder ver y likear colores de otros usuarios.
+Se trata de una aplicación que permita a un usuario crear boards de colores y poder ver y likear colores de otros usuarios.
 
 #### Etapas de desarrollo:
 
-##### Etapa 1:
-Herramientas a utilizar: react - jest
-Objetivo aplicación: Crear Aplicación que permita al usuario crear, borrar, listar y darle puntaje a un color propio.
-
-#### Etapa 2:
-Herramientas a utilizar: redux - immutable
-Objetivo aplicación: Mantener el estado de la aplicación generado en la etapa 1 en el store de redux
-
-#### Etapa 3:
-Herramientas a presentar: redux saga - reselect
-Objetivo aplicacion: Persistir y consumir  el estado de los datos de la aplicación con una api restful.
-
-#### Etapa 4:
-Herramientas a presentar:  react-router
-Objetivo aplicacion: Crear sistema de autenticación de usuarios y poder :
-* Acceder a los colores creados por otros usuarios.
-* Desloguearse de la aplicación
-
-#### Etapa 5:
+##### Tarea 1:
 Objetivo aplicacion: poder buscar usuarios y likear colores de los mismos.
+
+##### Tarea 2 (6-6-2017)
+Generar un estado de redux que respete la siguiente estructura
+a partir de las siguientes acciones:
+1. ADD_COLOR
+2. REMOVE_COLOR
+3. UPDATE_COLOR
+4. ADD_BOARD
+5. REMOVE_BOARD
+
+```
+{
+core: {
+  entities: {
+      boards:{
+        1: {id:1, name: 'board name'}
+        2: {id:2, name: 'board name2'}
+      },
+      colors: {
+        1: {id:1, name: 'color name', value: '#ff0000'}
+        2: {id:2, name: 'color name 2', value: '#ffff00'}
+      }
+}
+```

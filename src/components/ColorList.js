@@ -9,7 +9,7 @@ class ColorList extends Component {
   }
 
   rate = (id, rating) => {
-    this.props.onRate(...arguments);
+    this.props.onRate(id, rating);
   }
 
   remove = (id) => {

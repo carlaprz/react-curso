@@ -31,8 +31,17 @@ class App extends Component {
     this.setState({colors});
   }
 
-  rateColor = () => {
+  rateColor = (colorId, rating) => {
+    const colors = this.state.colors.map((color) => {
+      if (color.id !== colorId) {
+        return color;
+      }
 
+      return {...color, rating: rating};
+    });
+
+    console.log('mis colores', colors)
+    this.setState({colors});
   }
 
   removeColor = (id) => {

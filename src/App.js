@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+
 import logo from './logo.svg';
 import './App.css';
 
@@ -56,14 +57,15 @@ class App extends Component {
     const {colors} = this.state;
 
     return (
-      <div>
-        <AddColorForm onAddColor={this.addColor}/>
-        <ColorList
-          colors={colors}
-          onRate={this.rateColor}
-          onRemove={this.removeColor}
-        />
-      </div>
+
+          <div>
+            <AddColorForm onAddColor={this.addColor}/>
+            <ColorList
+              colors={colors}
+              onRate={this.rateColor}
+              onRemove={this.removeColor}
+            />
+          </div>
     );
   }
 }
